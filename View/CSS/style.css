@@ -1,8 +1,9 @@
 body{
     margin: 0px;
     padding: 0px;
-    background-color: darkgreen;
-
+    background-color: rgb(0, 43, 0);
+    background-image: url(https://www.minhaoperadora.com.br/wp-content/uploads/2021/05/Por-que-os-cassinos-usam-fichas-em-vez-de-dinheiro.jpg);
+    background-size: cover;
     font-family: 'Roboto', sans-serif;
     /*font-family: 'Mulish', sans-serif;*/
 }
@@ -12,34 +13,181 @@ h1, h2, h3, p, ul, li {
     padding: 0px;
 }
 
+hr{
+    border: 0px;
+    border-top: 1px solid #ac2a44;
+    margin-bottom: 20px;
+}
+
 main{
     display: flex;
     justify-content: center;
 }
 
 .main--container {
-    border: 1px solid rgb(0,0,0);
+    border: 1px solid rgb(236, 4, 4);
     max-width: 1000px;
+    height: calc(100vh - 250px);
     padding: 0px, 50px;
     display: flex;
     align-items: center;
 }
 
 .main--description {
-    border: 1px solid rgb(0,0,0);
+    border: 1px solid rgb(0, 255, 0);
+    height: 300px;
 }
 
 .main--description h1 {
     font-family: 'Mulish', sans-serif;
-    color: rgb(255, 183, 0);
     font-size: 60px;
+    height: 80px;
+    background: linear-gradient(to right, #837004, #ffd700 40%, #837004 50%, #837004 51%, #ffd700 30%);
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 2px 2px rgba(150, 113, 12, 0.2);
 }
 
 .main--description p {
     font-size: 28px;
+    padding-top: 90px;
+    padding-right: 8px;
+    color: #837004;
+}
+
+.main--description dd {
     padding-right: 30px;
+    color: #a58d05;
 }
 
 .main--login{
+    border: 1px solid rgb(0, 255, 213);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 150px;
+}
+
+.main--card {
+    background-color: transparent;
+    border-radius: 20px;
+    box-shadow: 0px, 5px 10px #ccc;
+    width: 370px;
+    padding: 15px;
+    text-align: center;
+    position:unset;
+}
+
+.main--card input {
+    width: 90%;
+    margin-bottom: 15px;
+    font-size: 16px;
+    padding: 15px;
+    border: 1px solid rgb(0,0,0);
+    border-radius: 20px;
+    outline: none;
+    transition: border-color .7s ease-in-out, color .7s ease-in-out, background-color 1s ease-in-out;
+}
+
+/*Quando não se tem entrada de texto*/
+.main--card input:valid {
+    color: white;
+    background-color: #3d6670;
+}
+
+/*Quando se tem a entrada do usuário*/
+.main--card input:not(:placeholder-shown)
+{
+
+    border: 2px solid rgb(167, 4, 4);
+    border-radius: 20px;
+    color: white;
+    background-color: #103742;
+}
+
+.main--card button {
+    width: 100%;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: #3d6670;
+    color: #ac2a44;
+    font-size: 20px;
+    font-weight: bold;
+    transition: 2s;
+}
+
+.main--card button:hover {
+        color: transparent;
+        background-color: #284952;
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLAupM7UVjSldB4hgxB6BEXETSg7qEXpvZe086hMw3oPnoRBV_ypEHs8HluaVoC13mBzo&usqp=CAU");
+        background-size: auto;
+}
+
+.main--link {
+    margin-bottom: 20px;
+}
+
+.main--link a{
+    text-decoration: none;
+    font-size: 14px;
+    color: goldenrod;
+}
+
+.main--link a:hover 
+{
+    text-decoration: underline;
+}
+
+.main--btn 
+{
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.main--btn a{
+    max-width: 50%;
+    text-decoration: none;
+    background-color: rgb(172, 149, 24);
+    padding: 15px;
+    color: black;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.main--btn a:hover{
+    background-color: rgb(150, 128, 4);
+}
+
+.main--footer 
+{
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.main--footer a
+{
+    text-decoration: none;
+    color: #837004;
+    font-weight: bold;
+}
+
+.main--footer a :hover
+{
+    text-decoration: underline;
+}
+
+footer {
+    background-color: transparent;
+    height: 50px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
     border: 1px solid rgb(0,0,0);
 }
