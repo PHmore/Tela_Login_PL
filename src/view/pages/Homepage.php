@@ -1,3 +1,21 @@
+<?php
+
+require_once ("src\controller\UserController.php");
+
+if($_POST) {
+
+    $name = $_POST ["name"];
+
+    $user = new UserController ();
+
+    if ($user -> verifyLogin ($name)) {
+        echo ("<script> console.log ('usuario'); </script>");
+    }
+
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +24,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Paid4Luck</title>
 
-    <link rel = "stylesheet" type="text/css" href="../CSS/style.css">
+    <link rel = "stylesheet" type="text/css" href="../css/style_hp.css">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
