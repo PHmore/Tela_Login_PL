@@ -40,12 +40,12 @@ if($_POST) {
             </div>
             <div class = "main--login">
                 <div class = "main--card">
-                    <form>
+                    <form method="post">
                         <div>
-                            <input type="email" name = "email" placeholder="Email ou telefone">
+                            <input type="email" name = "email" placeholder="Email"required>
                         </div>
                         <div>
-                            <input type="password" name = "password" placeholder="Senha">
+                            <input type="password" name = "password" placeholder="Senha"required>
                         </div>
                         <button type="submit">Entrar</button>
                         <div class ="main--link">
