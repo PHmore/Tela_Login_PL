@@ -1,4 +1,5 @@
 <?php
+//ENCAMINHAMENTO PELA URL
 
 $url = $_SERVER ('REQUEST_URI');
 

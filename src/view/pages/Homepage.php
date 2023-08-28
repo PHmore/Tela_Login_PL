@@ -19,6 +19,7 @@ if($_POST) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel = "stylesheet" href="http://localhost:8000/src/view/css/style_hp.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
