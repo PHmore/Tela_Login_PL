@@ -1,27 +1,39 @@
 <?php
 
-use FTP\Connection;
+require_once ("src/model/UserModel.php");
 
-require_once ("src\config\Connection.php");
-
-class UserModel {
+class UserController {
 
 
-    function login ($name)
+    function verifyLogin ($name)
     {
-        $connect = new Connection ();
-        $sql = $connect -> getConnection () -> query ("SELECT * FROM usuario WHERE nome = '$name'");
-        $sql = $sql -> fetchAll (PDO::FETCH_ASSOC);
-        return $sql;
+        $user = new UserModel ();
+        $user = $user -> Login ($name);
+
+        if(isset ($user[0]))
+        {
+            $data = $user [0];
+            
+            if($data["nome"] == $name)
+            {
+                return 1;
+            } else
+            {
+                echo "O usuário não existe";
+                echo "<br>";
+                return 0;
+            }
+        }
+        else
+        {
+            return 0;
+        }
     }
 }
 
-/* TESTE
 $user = new UserModel ();
 $user = $user -> Login ("ana");
 $nome = $user [0];
 print_r ($nome ["nome"]);
-
-*/
 
 ?>

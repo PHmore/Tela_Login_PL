@@ -1,8 +1,26 @@
-<!DOCTYPE html>
+<?php
+
+require_once ("src\controller\UserController.php");
+
+if($_POST) {
+
+    $name = $_POST ["name"];
+
+    $user = new UserController ();
+
+    if ($user -> verifyLogin ($name)) {
+        echo ("<script> console.log ('usuario existe'); </script>");
+    }
+
+}
+
+?>
+
 <html>
 <head>
     <title>Subscribe</title>
 </head>
+<link rel = "stylesheet" href="http://localhost:9000/src/view/css/style_sp.css">
 <body>
     <div class = "subscribe-container">
         <h1>Comece a lucrar AGORA!</h1>
@@ -12,8 +30,8 @@
 
             <p>
 
-            <label for = "passoword">Senha:</label>
-            <input type = "password" id = "password" passoword = "password "required>
+            <label for = "password">Senha:</label>
+            <input type = "password" id = "password" passoword = "password ">
 
             <p>
 

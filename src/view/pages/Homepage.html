@@ -9,23 +9,17 @@ if($_POST) {
     $user = new UserController ();
 
     if ($user -> verifyLogin ($name)) {
-        echo ("<script> console.log ('usuario'); </script>");
+        echo ("<script> console.log ('usuario existe'); </script>");
     }
 
 }
 
 ?>
 
-<!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel = "stylesheet" href="http://localhost:8000/src/view/css/style_hp.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href="http://localhost:9000/src/view/css/style_hp.css">
     <title>Login Paid4Luck</title>
-
-    <link rel = "stylesheet" type="text/css" href="../css/style_hp.css">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

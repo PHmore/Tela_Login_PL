@@ -9,10 +9,10 @@ switch($url)
         echo ("home");
         break;
     case '/login':
-        include ("src/view/pages/Homepage.php");
+        include ("src/view/pages/Homepage.html");
         break;
     case '/subscribe':
-        include ("src/view/pages/Subspage.php");
+        include ("src/view/pages/Subspage.html");
     default:
         echo 'Rota não tratada';
         break;
